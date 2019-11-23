@@ -1,10 +1,13 @@
 package com.model;
 
-import javax.persistence.Column;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Bidder 
@@ -25,7 +28,9 @@ public class Bidder
 	private String trader_license_fname;
 	private String password;
 	private String status;
-	
+	@JoinColumn(name="b_email")
+	@ManyToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+	List<Bidding> bidding;
 	public String getFull_name() {
 		return full_name;
 	}
@@ -116,6 +121,12 @@ public class Bidder
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	public List<Bidding> getBidding() {
+		return bidding;
+	}
+	public void setBidding(List<Bidding> bidding) {
+		this.bidding = bidding;
+	}
 	public Bidder() {
 		super();
 	}
@@ -125,8 +136,9 @@ public class Bidder
 				+ address + ", city=" + city + ", state=" + state + ", pincode=" + pincode + ", account_no="
 				+ account_no + ", ifsc_code=" + ifsc_code + ", adhar_no=" + adhar_no + ", adhar_fname=" + adhar_fname
 				+ ", pan_fname=" + pan_fname + ", trader_license_fname=" + trader_license_fname + ", password="
-				+ password + ", status=" + status + "]";
+				+ password + ", status=" + status + ", bidding=" + bidding + "]";
 	}
+	
 	
 	
 	

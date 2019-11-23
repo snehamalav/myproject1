@@ -28,7 +28,8 @@ public class MyControllerBidder {
 	 public BidderService bidderService;
 
 	 @RequestMapping(value = "/Bidderregister", method = RequestMethod.GET)
-	  public ModelAndView showRegister2(HttpServletRequest request, HttpServletResponse response) {
+	  public ModelAndView showRegister2(HttpServletRequest request, HttpServletResponse response) 
+	  {
 	    ModelAndView mav = new ModelAndView("Bidderreg");
 	    mav.addObject("bidder", new Bidder());
 	    return mav;
@@ -110,8 +111,8 @@ public class MyControllerBidder {
 		      HttpSession session= request.getSession();
 		      session.setAttribute("fullname", ibidder.getB_email());
 		    } else {
-		      mav = new ModelAndView("loginBidder");
-		      mav.addObject("message", "biddername or Password is wrong!!");
+		      mav = new ModelAndView("loginb");
+		      mav.addObject("message", "biddername or Password is wrong!!or you are not registered");
 		    }
 		    return mav;
 		  }

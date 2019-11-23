@@ -102,7 +102,7 @@ button:hover {
         </div>
       </center>
       <br><br>
-      <p>${message}</p>
+    <h1>${message}</h1>
       <div class="footer">
         <li><a target="_blank" href="https://india.gov.in/"><img alt="" src="https://enam.gov.in/web/assest/images/footer/img2.jpg"></a></li>
         <li><a target="_blank" href="https://digitizeindia.gov.in/"><img alt="" src="https://enam.gov.in/web/assest/images/footer/img3.jpg"></a></li>

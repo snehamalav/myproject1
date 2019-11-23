@@ -14,5 +14,9 @@
 session.getAttribute("full_name"); 
 %>
 
+<form action="biddingrequest.do" method="get">
+<button><input type="submit" value="view bidding requests"/></button>
+</form>
+
 </body>
 </html>

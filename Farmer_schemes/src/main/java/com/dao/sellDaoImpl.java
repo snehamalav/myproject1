@@ -16,8 +16,7 @@ public class sellDaoImpl implements sellDao {
 	public boolean insertSellRequest(SellRequest request) {
 		  boolean flag=false;
 		    try {
-		    	
-		    	
+		    
 		    	em.persist(request);
 		    	System.out.println("end");
 		    	flag=true;
