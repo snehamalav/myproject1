@@ -2,6 +2,21 @@
 <html>
 <head>
 <title>place sell req</title>
+
+<script>
+function checkDate() 
+{
+	   var selectedText = document.getElementById('edate').value;
+	   var startdate = new Date(selectedText);
+	   var today = new Date();
+		if (startdate < today || selectedText=='') 
+	   	{
+		    alert("Enter a Valid Date");
+		   	return false;
+	   	}
+	   
+	}
+</script>
 </head>
 <body>
 
@@ -42,7 +57,7 @@
 <td><input type="number" name="increment_value" id="increment_value" placeholder="enter increment amount"/></td><br>
 </tr>
 <tr>
-<td colspan="2" align="center"><input type="submit" value="Place Request"/>
+<td colspan="2" align="center"><input type="submit" onclick="return checkDate()" value="Place Request"/>
 </td>
 </tr>
 </table>

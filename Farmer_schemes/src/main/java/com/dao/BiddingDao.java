@@ -2,8 +2,9 @@ package com.dao;
 
 import java.util.List;
 
-import com.model.Bidding;
+
+import com.model.SellRequest;
 
 public interface BiddingDao {
-	public List<Bidding> getBiddingList();
+	public List<Object[]> getBiddingList();
 }

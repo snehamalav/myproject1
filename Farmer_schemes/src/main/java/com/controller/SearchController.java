@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.model.Bidder;
 import com.model.Farmer;
+import com.model.SellRequest;
 import com.service.SearchService;
 
 @Controller("mycontroller9")
@@ -104,6 +105,25 @@ public class SearchController {
 	} 
 	
 	
+	@RequestMapping(value="/searchrequest", method=RequestMethod.GET)
+	public ModelAndView searchBiddingRequest(HttpServletRequest request, HttpServletResponse response)
+	{
+		int c_id=Integer.parseInt(request.getParameter("c_id"));
+		/*String crop_name=request.getParameter("crop_name");
+		String crop_type=request.getParameter("crop_type");*/
+		
+		System.out.println("id"+c_id);
+		/*System.out.println("name"+crop_name);
+		System.out.println("type"+crop_type);*/
+		SellRequest request1=new SellRequest();
+		request1.setC_id(c_id);
+		/*request1.setCrop_name(crop_name);
+		request1.setCrop_type(crop_type);*/
+		SellRequest request2=searchService.searchSellRequest(request1);
+		ModelAndView mav=new ModelAndView("searchedrequest");
+		mav.addObject("request2",request2);
+		return mav;
+	}   
 	
 	
 	/*@RequestMapping(value="/searchbidder", method=RequestMethod.POST)

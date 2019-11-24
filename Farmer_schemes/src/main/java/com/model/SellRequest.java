@@ -34,7 +34,7 @@ public class SellRequest {
 	private Date end_date;
 	private String status;
 	@JoinColumn(name="f_email")
-	@ManyToOne(fetch = FetchType.EAGER )
+	@ManyToOne(fetch = FetchType.LAZY )
 	private Farmer farmer;
 	
 	@JoinColumn(name="c_id")

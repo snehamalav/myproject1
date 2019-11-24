@@ -19,9 +19,10 @@ table, th, td {
 <center> <h1> LIST OF BIDDING REQUESTS</h1>
 <table>
  <tr>
-<th>Crop ID </th> 
+ <th>Crop ID </th>
  	<th>Crop Type</th>
   	<th>Crop Name</th>
+  	<th>Fertilizer Type</th>
 	<th>quantity</th>
 	<th>base_price</th>
 	<th>increment_value</th>
@@ -32,16 +33,29 @@ table, th, td {
     
     	
         <tr>
-        	<td>${Crop.c_id}</td> 
-            <td>${Crop.crop_type}</td>
-          	<td>${Crop.crop_name}</td>
-          	<td>${Crop.quantity}</td>
-          	<td>${Crop.base_price}</td>
-          	<td>${Crop.increment_value}</td>
+           <td>${Crop[0]}</td> 
+            <td>${Crop[2]}</td>
+          	<td>${Crop[3]}</td>
+          	<td>${Crop[4]}</td>
+          	<td>${Crop[7]}</td>
+          	<td>${Crop[8]}</td>
+          	<td>${Crop[9]}</td>
 
         </tr>
     </c:forEach>
 </table>
 </center>
+
+<form action="searchrequest.do" method="get">
+enter crop id
+<input type="text" name="c_id" placeholder="crop id"/>
+<br>
+<!-- enter crop name
+<input type="text" name="crop_name" placeholder="crop name"/> 
+<br>
+enter crop type
+<input type="text" name="crop_type" placeholder="crop type"/>  -->
+<input type="submit" value="submit"/>
+</form>
 </body>
 </html> 

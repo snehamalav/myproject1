@@ -32,7 +32,7 @@
       </div>
       
  <h1>Bidder Registration:</h1>
-<form class="Reg" action="Bidderregister.do" modelAttribute="ibidder" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+<form class="Reg" action="Bidderregister.do" modelAttribute="ibidder" method="post" enctype="multipart/form-data" >
  
   Personal Details  
     <p><input type="text" placeholder="Full Name" name='full_name' id='bname' required/><div id='id1' class='error'></div></p>
@@ -52,7 +52,7 @@
     <p><input type="text" placeholder="AccountNo" name="account_no" id='baccno'><div id='id5' class='error'></div></p>
     <p><input type="text" placeholder="IFSC Code" name="ifsc_code" id='bifsc'><div id='id6' class='error'></div></p>
   
- <p> <input type="text" placeholder="Andhar no."  name="adhar_no" id="badhar_no"></p>
+ <p> <input type="text" placeholder="Adhar no."  name="adhar_no" id="badhar_no"><div id='id7' class='error'></div></p>
    Document Upload
     <p><input type="file" placeholder="Aadhaar" name="file" id="baadhaar"></p>
     <p><input type="file" placeholder="PAN" name="file" id="bpan"></p>
@@ -60,7 +60,7 @@
 
 
   Password 
-    <p><input type="password" placeholder="Password" name="password" id="bpassword" ><div id='id7' class='error'></div></p>
+    <p><input type="password" placeholder="Password" name="password" id="bpassword" ><div id='id8' class='error'></div></p>
 
     <div style="float:right;">
        <!-- <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button> -->

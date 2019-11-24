@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.model.Bidding;
+import com.model.SellRequest;
 import com.service.BiddingService;
 
 @Controller("biddingController3")
@@ -20,7 +20,7 @@ public class BiddingController {
 	@RequestMapping(value="/biddingrequest", method=RequestMethod.GET)
 	public ModelAndView viewbiddinglist()
 	{
-		List<Bidding> list=biddingService.getBiddingList();
+		 List<Object[]> list=biddingService.getBiddingList();
 		ModelAndView mav=new ModelAndView("viewbidding");
 		mav.addObject("list",list);
 		return mav;

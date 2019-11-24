@@ -38,7 +38,7 @@
   </div>
 
   <h1>Farmer Registration:</h1>
-<form class="Reg" action="Farmerregister.do"  modelAttribute="farmer" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+<form class="Reg" action="Farmerregister.do"  modelAttribute="farmer" method="post" enctype="multipart/form-data" >
 Personal Details  
     <p><input type="text" placeholder="Full Name" name='full_name' id='fname' required/><div id='id1' class='error'></div></p>
     <p><input type="text" placeholder="Contact No"  name='contact_no' id='contact' required/><div id='id2' class='error'></div></p>
@@ -61,13 +61,13 @@ Address Details
     <p><input type="text" placeholder="AccountNo" name="account_no" id='accno' required><div id='id5' class='error'></div></p>
     <p><input type="text" placeholder="IFSC Code" name="ifsc_code" id='ifsc' required><div id='id6' class='error'></div></p>
  
-    <p> <input type="text" placeholder="Andhar no."  name="adhar_no" id="adhar_no" required></p>
+    <p> <input type="text" placeholder="Adhar no."  name="adhar_no" id="adhar_no" required><div id='id7' class='error'></div></p>
   Document Upload
     <p><input type="file" placeholder="Aadhaar" name="file" id="aadhaar" required></p>
     <p><input type="file" placeholder="PAN" name="file" id="pan" required></p>
     <p><input type="file" placeholder="certificate" name="file" id="certificate" required></p>
  
-    <p><input type="password" placeholder="Password" name="password" id="password" required><div id='id7' class='error'></div></p>
+    <p><input type="password" placeholder="Password" name="password" id="password" required><div id='id8' class='error'></div></p>
 
 
 

@@ -7,10 +7,10 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.model.Bidder;
 import com.model.Farmer;
+import com.model.SellRequest;
 @Repository("searchDao")
 public class SearchDaoImpl implements SearchDao {
 	@PersistenceContext
@@ -48,5 +48,18 @@ public class SearchDaoImpl implements SearchDao {
 		Bidder fm = em.find(Bidder.class, app);
 		return fm;
 		
+	}
+	
+	public SellRequest searchSellRequest(SellRequest request1)
+	{
+		
+		
+		//SellRequest request3 =(SellRequest)em.createQuery("Select s from SellRequest s where s.c_id=:c_id").setParameter("c_id",request1.getC_id()).getSingleResult();
+		/*System.out.println("cid"+request3.getC_id());
+		System.out.println("name"+request3.getCrop_name());
+		System.out.println("type"+request3.getCrop_type());
+		*/
+		SellRequest request3 =em.find(SellRequest.class, request1.getC_id());
+		return request3;
 	}
 }

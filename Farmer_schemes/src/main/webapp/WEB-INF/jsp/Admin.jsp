@@ -61,6 +61,8 @@ h3 {color:antiquewhite; font-size:28px;margin-bottom:24px;}
                   <button><input type="submit" value="Search Farmer to Approve" ></form></button>
                   <form action="searchbidder.do" method="get">
                   <button><input type="submit" value="Search Bidder to Approve" ></form></button>
+                   <form action="viewcrop.do" method="get">
+                  <button><input type="submit" value="View All Crop Request"/></button></form>
                   </center>
         </div>
         <div class="footer">

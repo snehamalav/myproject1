@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.dao.BiddingDao;
-import com.model.Bidding;
+import com.model.SellRequest;
 
 @Service("biddingService")
 public class BiddingServiceImpl  implements BiddingService {
@@ -16,9 +16,9 @@ public class BiddingServiceImpl  implements BiddingService {
 	public BiddingDao biddingDao;
 	
 	@Transactional
-	public List<Bidding> getBiddingList()
+	public List<Object[]> getBiddingList()
 	{
-		List<Bidding> blist=biddingDao.getBiddingList();
+		List<Object[]> blist=biddingDao.getBiddingList();
 		return blist;
 	}
 }

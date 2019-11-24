@@ -8,6 +8,7 @@ import org.springframework.transaction.event.TransactionalEventListener;
 import com.dao.SearchDao;
 import com.model.Bidder;
 import com.model.Farmer;
+import com.model.SellRequest;
 @Service("searchService")
 public class SearchServiceImpl implements SearchService {
 
@@ -39,5 +40,11 @@ public class SearchServiceImpl implements SearchService {
 		Bidder fm=searchDao.bidderApprove(app,action);
 		return fm;
 		
+	}
+	@Transactional
+	public SellRequest searchSellRequest(SellRequest request1)
+	{
+		SellRequest request3=searchDao.searchSellRequest(request1);
+		return request3;
 	}
 }
